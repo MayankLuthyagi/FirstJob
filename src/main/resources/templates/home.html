@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link href="./output.css" rel="stylesheet">
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const dropdownButton = document.getElementById("dropdownNavbarLink");
+      const dropdownMenu = document.getElementById("dropdownNavbar");
+
+      dropdownButton.addEventListener("click", function () {
+        dropdownMenu.classList.toggle("hidden");
+      });
+    });
+    // Mobile menu toggle
+    const menuButton = document.querySelector('[data-collapse-toggle="navbar-dropdown"]');
+    const menu = document.getElementById('navbar-dropdown');
+
+    menuButton.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+</head>
+<body>
+
+<nav class="bg-white border-black-900 dark:bg-black-900 dark:border-black-700 border-2">
+  <div class="max-w-screen-2xl flex items-center justify-between p-4">
+    <!-- Logo Section -->
+    <a href="home.html" class="flex items-center space-x-1 rtl:space-x-reverse lg:ml-16 md:ml-8">
+      <img src="../img/logo.png" class="h-12" alt="Logo" />
+      <div class="inline-flex items-end">
+        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">OpportuneX</span>
+        <div class="w-1.5 h-1.5 bg-customPurple rounded-full ml-1 mb-1.5"></div>
+      </div>
+    </a>
+
+    <!-- Hamburger Button (visible on mobile) -->
+    <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-dropdown" aria-expanded="false">
+      <span class="sr-only">Open main menu</span>
+      <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+      </svg>
+    </button>
+
+    <!-- Navbar Links (visible on larger screens) -->
+    <div class="hidden w-full md:block md:w-auto mr-16" id="navbar-dropdown">
+      <ul class="flex flex-col md:flex-row font-medium p-4 md:p-0 mt-4 md:mt-0 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 items-center">
+        <li>
+          <a href="home.html" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent" aria-current="page">Home</a>
+        </li>
+        <li>
+          <button id="dropdownNavbarLink" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Training
+            <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+            </svg>
+          </button>
+          <div id="dropdownNavbar" class="absolute z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+            <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownNavbarLink">
+              <li><a href="certification.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Certifications</a></li>
+              <li><a href="resume-builder.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Resume Builder</a></li>
+              <li><a href="interview-prep.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Interview Prep</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="opportunities.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Opportunities</a>
+        </li>
+        <li>
+          <a href="contact.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+        </li>
+        <li>
+          <a href="about.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
+        </li>
+        <li>
+          <a href="login.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">SignIn</a>
+        </li>
+        <li>
+          <a href="join.html" class="block py-1 px-4 text-custompurple bg-white rounded border-2 border-custompurple font-bold hover:bg-opacity-90 md:p-1 md:px-3 dark:text-white">Join</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <div class="relative flex items-center justify-center">
+    <!-- Image -->
+    <img class="mt-12 w-10/12 h-auto" src="../img/menuImg.png" alt="Image">
+
+    <!-- First Text (Center) -->
+    <div class="absolute inset-0 mt-16 flex flex-col items-center justify-center text-white text-5xl font-bold">
+      Your First Job Awaits! OpportuneX
+      <span class="mt-2">Opens Doors to Your Future</span>
+    </div>
+
+    <!-- Second Text (Bottom) -->
+    <div class="absolute bottom-0 flex flex-col items-center justify-center text-gray-400 font-bold text-l mb-16">
+      <span class="flex space-x-10">
+        <span>Opportunities From:</span>
+        <span>Google</span>
+        <span>Microsoft</span>
+        <span>Amazon</span>
+        <span>Sony</span>
+        <span>Deloitte</span>
+      </span>
+    </div>
+  </div>
+</main>
+
+
+<footer class="bg-white rounded-lg shadow dark:bg-gray-900 m-4">
+  <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+    <div class="sm:flex sm:items-center sm:justify-between">
+      <a href="home.html" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+        <img src="../img/logo.png" class="h-8" alt="OpportuneX Logo" />
+        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">OpportuneX</span>
+      </a>
+      <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+        <li>
+          <a href="about.html" class="hover:underline me-4 md:me-6">About</a>
+        </li>
+        <li>
+          <a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a>
+        </li>
+        <li>
+          <a href="#" class="hover:underline me-4 md:me-6">Licensing</a>
+        </li>
+        <li>
+          <a href="contact.html" class="hover:underline">Contact</a>
+        </li>
+      </ul>
+    </div>
+    <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+    <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="#" class="hover:underline">OpportuneX™</a>. All Rights Reserved.</span>
+  </div>
+</footer>
+
+</body>
+</html>
